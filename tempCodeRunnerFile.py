@@ -1,0 +1,1 @@
+create_sprite((0, 255, 100), (50, 50), "circle")

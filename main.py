@@ -18,8 +18,8 @@ def create_sprite(color, size, shape="rect"):
         pygame.draw.rect(surf, color, [0, 0, size[0], size[1]])
     return surf
 
-alien_surf = create_sprite((0, 255, 100), (50, 50), "circle") # Green Aliens
-star_surf = create_sprite((255, 215, 0), (30, 30))           # Golden Powerup
+alien_surf = pygame.image.load("alien.png").convert_alpha() # Green Aliens
+star_surf = pygame.image.load("star.png").convert_alpha()   # Golden Powerup
 
 # --- Game Variables ---
 num_aliens = 6
@@ -29,7 +29,7 @@ for _ in range(num_aliens):
     aliens.append([
         random.randint(0, WIDTH - 50), 
         random.randint(-400, -50), 
-        random.uniform(0.3, 0.8)
+        random.uniform(0.005, 0.1)
     ])
 
 # Powerup variables
